@@ -30,7 +30,6 @@ The script `eboVar.sh` is the core of the pipeline. It performs the following st
 
 ```bash
 apptainer run --bind $(pwd):/data containers/ebovar.sif \
-  -i /data/data/rawreads \
-  -r /data/data/reference/ebov_ref.fa \
-  -o /data/results \
+  -i ./data/rawreads \
+  -r ./data/reference/ebov_ref.fa \
   -t 8

@@ -1,0 +1,16 @@
+# Ignore Apptainer image
+*.sif
+
+# Ignore all results
+results/
+
+# Ignore FASTQ and large raw read files
+data/rawreads/*.fastq.gz
+
+# Ignore reference index files
+data/reference/*.amb
+data/reference/*.ann
+data/reference/*.bwt
+data/reference/*.fai
+data/reference/*.pac
+data/reference/*.sa

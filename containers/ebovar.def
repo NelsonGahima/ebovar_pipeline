@@ -1,0 +1,66 @@
+Bootstrap: docker
+From: ubuntu:22.04
+
+%labels
+    Author Group1
+    Version v1.0
+
+%help
+    ------------------------------------------------------------------------
+    Bioinformatics Pipeline: QC → Trimming → Alignment → Variant Calling
+
+    This container runs:
+      1. FastQC         - quality check of raw reads
+      2. fastp          - trimming and filtering
+      3. BWA            - aligning timmed reads to the EBOV reference genome
+      4. bcftools       - variant calling
+
+    🧾 Usage:
+      apptainer run --bind $(pwd):/data ebovar.sif -i <input_reads_folder> -r <EBOV_reference_genome> -o <output_folder> [-t <threads>]
+
+    📂 Mount input/output folders using --bind
+
+    Tools are installed using Miniforge and your ebovar.yml
+
+    ------------------------------------------------------------------------
+
+%files
+    ../scripts/eboVar.sh /usr/local/bin/eboVar.sh
+    ./ebovar.yml /ebovar.yml
+
+%post
+    # Update and install required system packages
+    apt-get update && apt-get install -y --no-install-recommends \
+        wget curl bzip2 ca-certificates git tree build-essential \
+        libglib2.0-0 libxext6 libsm6 libxrender1 \
+        && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+    # Install Miniforge (lightweight conda)
+    MINIFORGE=Miniforge3-Linux-x86_64.sh
+    wget https://github.com/conda-forge/miniforge/releases/latest/download/$MINIFORGE
+    bash $MINIFORGE -b -p /opt/conda
+    rm $MINIFORGE
+
+    # Setup conda in bash shell
+    /opt/conda/bin/conda init bash
+
+    # Copy environment file and create environment
+    mkdir -p /opt/env
+    cp /ebovar.yml /opt/env/
+    /opt/conda/bin/mamba env create -f /opt/env/ebovar.yml
+
+    # Clean up
+    /opt/conda/bin/conda clean --all --yes
+
+    # Ensure eboVar.sh is executable
+    chmod +x /usr/local/bin/eboVar.sh
+
+%environment
+    export PATH="/opt/conda/envs/ebovar/bin:/opt/conda/bin:$PATH"
+    export CONDA_DEFAULT_ENV=ebovar
+    export LC_ALL=C
+    export LANG=C
+
+%runscript
+    # Runs when container is executed directly
+    exec bash /usr/local/bin/eboVar.sh "$@"

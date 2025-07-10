@@ -11,7 +11,7 @@ This capstone project presents a fully containerized, reproducible pipeline for 
 
 Key features:
 - Fully automated read quality control, trimming, alignment, and variant calling
-- Conda-managed environment via `Miniforge`
+- Conda-managed environment via `Miniforge3`
 - Apptainer containerization for reproducibility
 - Clean, organized output structure with logging for every sample
 

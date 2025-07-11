@@ -59,3 +59,19 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 | `-t`   | Number of threads               | No       | 8       |
 | `-h`   | Show help and usage info        | No       | —       |
 
+## ⚙️ Building the Apptainer Container
+
+1. Ensure you have [Apptainer](https://apptainer.org) installed on your system.
+
+2. Navigate to the `containers/` directory in your project:
+
+```bash
+cd containers
+```
+
+3. Build the container image from the definition file:
+
+```bash
+apptainer build ebovar.sif ebovar.def
+
+

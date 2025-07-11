@@ -1,7 +1,22 @@
 # 🧬 EBOVar: Variant Calling Pipeline for EBOV Sequences
 
-> **Capstone Project – Africa CDC Bioinformatics Fellowship**  
+> **Capstone Project – eboVar: A Bash Pipeline for EBOV Variant Profiling and analysis**  
 > **Group 1 | Module 15 | Date: July 10, 2025**
+
+---
+
+## 📚 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Script: eboVar.sh](#-script-ebovarsh)
+- [Building the Apptainer Container](#-building-the-apptainer-container)
+- [Running the Pipeline](#-running-the-pipeline)
+- [Project Structure](#-project-structure)
+- [Tools Used](#-tools-used)
+- [Expected Output](#-expected-output)
+- [Gitignore and Tracking Output](#-gitignore-and-tracking-output)
+- [Authors](#-authors)
+- [License](#-license)
 
 ---
 
@@ -24,8 +39,8 @@
 
 This capstone project presents a fully containerized, reproducible pipeline for processing *Ebola Virus (EBOV)* Illumina sequencing data — from raw reads to final variant calls. The pipeline is implemented in a bash script (`eboVar.sh`) and packaged inside an [Apptainer](https://apptainer.org) container to ensure portability and reproducibility across systems.
 
-Key features:  
-- Fully automated read quality control, trimming, alignment, and variant calling  
+**Key features:**  
+- Fully automated quality control, trimming, alignment, and variant calling  
 - Conda-managed environment via `Miniforge3`  
 - Apptainer containerization for reproducibility  
 - Clean, organized output structure with logging for every sample  
@@ -34,12 +49,12 @@ Key features:
 
 ## 🧰 Script: `eboVar.sh`
 
-The script `eboVar.sh` is the core of the pipeline. It performs the following steps:
+The `eboVar.sh` script performs the following pipeline steps:
 
-1. **Quality Control** – using `FastQC` on raw reads  
-2. **Trimming & Filtering** – using `fastp`  
-3. **Read Alignment** – with `BWA` to the EBOV reference genome  
-4. **Variant Calling** – using `bcftools` for SNP/indel detection  
+1. **Quality Control** using `FastQC`  
+2. **Trimming & Filtering** with `fastp`  
+3. **Read Alignment** to EBOV reference genome using `BWA`  
+4. **Variant Calling** with `bcftools`  
 
 ### 🖥️ Usage
 
@@ -49,6 +64,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
   -r ./data/reference/ebov_ref.fa \
   -t 8
 ```
+
 ### Options
 
 | Option | Description                     | Required | Default |
@@ -86,9 +102,9 @@ Run the pipeline using the built container and bind your project directory to `/
 
 ```bash
 apptainer run --bind $(pwd):/data containers/ebovar.sif \
-  -i /data/data/rawreads \
-  -r /data/data/reference/ebov_ref.fa \
-  -o /data/results \
+  -i ./data/rawreads \
+  -r ./data/reference/ebov_ref.fa \
+  -o ./results \
   -t 8
 ```
 

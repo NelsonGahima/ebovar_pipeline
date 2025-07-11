@@ -117,7 +117,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
     └── eboVar.sh
 ```
 
-## 🛠️ Tools Used (Versions specified in `ebovar.yml`)
+## 🛠️ Tools Used and versions
 
 - **FastQC**: `v.12.1`
 - **Fastp**: `v1.0.1`

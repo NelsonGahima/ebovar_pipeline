@@ -96,18 +96,23 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 
 ```
 .
-├── README.md
-├── containers/
-│   ├── ebovar.def      # Apptainer definition file
-│   ├── ebovar.yml      # Conda environment YAML file
-│   └── ebovar.sif      # Built Apptainer container image
-├── data/
-│   ├── rawreads/       # Input FASTQ files
-│   └── reference/      # EBOV reference genome and index files
-├── results/            # Output directory
-├── scripts/
-│   └── eboVar.sh       # Main pipeline script
-└── docs/               # Optional documentation
+├── README.md                # This file
+├── containers               # Apptainer container files
+│   ├── ebovar.def           # Container definition file
+│   ├── ebovar.sif           # Built Apptainer image
+│   └── ebovar.yml           # Conda environment YAML file
+├── data                     # Input data
+│   ├── rawreads             # Raw FASTQ files (input reads)
+│   └── reference            # Reference genome files and indexes
+├── docs                     # Optional Documentation (e.g., images, reports)
+├── results                  # Output directory
+│   ├── bam                  # Sorted BAM alignment files and indexes
+│   ├── logs                 # Pipeline run logs for each sample
+│   ├── qc                   # FastQC output files
+│   ├── trimmed              # Trimmed FASTQ files and fastp reports
+│   └── vcf                  # Variant call files
+└── scripts                  # Pipeline bash script
+    └── eboVar.sh
 ```
 
 

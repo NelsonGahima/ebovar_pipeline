@@ -119,12 +119,12 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 
 ## 🛠️ Tools Used (Versions specified in `ebovar.yml`)
 
-- **FastQC**
-- **fastp**
-- **BWA**
-- **samtools**
-- **bcftools**
-- **mamba / conda** (via Miniforge)
+- **FastQC**: `v.12.1`
+- **Fastp**: `v1.0.1`
+- **BWA**: `v0.7.19`
+- **samtools**: `v1.22`
+- **bcftools**: `v1.22`
+- **mamba**: `v2.1.1` / **conda**: `v25.5.1`
 
 ## 📂 Expected Output
 

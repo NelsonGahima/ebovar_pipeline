@@ -94,7 +94,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 
 ## 📁 Project Structure
 
-
+```
 .
 ├── README.md                # This file
 ├── containers               # Apptainer container files
@@ -113,7 +113,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 │   └── vcf                  # Variant call files
 └── scripts                  # Pipeline bash script
     └── eboVar.sh
-
+```
 
 
 

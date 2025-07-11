@@ -48,3 +48,11 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
   -i ./data/rawreads \
   -r ./data/reference/ebov_ref.fa \
   -t 8
+```
+Options
+Option	Description	Required	Default
+-i	Input reads folder (raw FASTQ files)	Yes	—
+-r	Reference genome FASTA file	Yes	—
+-o	Output folder for results	Yes	—
+-t	Number of threads	No	8
+-h	Show help and usage info	No	—

@@ -65,8 +65,9 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 1. Ensure you have [Apptainer](https://apptainer.org) installed on your system.  
    You can verify this by running:
 
-   ```bash
-   which apptainer
+```bash
+which apptainer
+```
 Example output: /usr/local/bin/apptainer
 
 2. Navigate to the `containers/` directory in your project:

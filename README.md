@@ -124,7 +124,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 - **BWA**: `v0.7.19`
 - **samtools**: `v1.22`
 - **bcftools**: `v1.22`
-- **mamba**: `v2.1.1` / **conda**: `v25.5.1`
+- **mamba**: `v2.1.1` / **conda**: `v25.5.1` (via Miniforge)
 
 ## 📂 Expected Output
 

@@ -32,7 +32,7 @@ This capstone project presents a fully containerized, reproducible pipeline for 
 
 ---
 
-## 🧰 Bash Pipeline Tool: `eboVar.sh`
+## 🧰 Script: `eboVar.sh`
 
 The `eboVar.sh` script performs the following pipeline steps:
 

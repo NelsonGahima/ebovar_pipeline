@@ -20,21 +20,6 @@
 
 ---
 
-## 📚 Table of Contents
-
-- [Project Overview](#-project-overview)
-- [Script: eboVar.sh](#-script-ebovarsh)
-- [Building the Apptainer Container](#-building-the-apptainer-container)
-- [Running the Pipeline](#-running-the-pipeline)
-- [Project Structure](#-project-structure)
-- [Tools Used](#-tools-used)
-- [Expected Output](#-expected-output)
-- [Gitignore and Tracking Output](#-gitignore-and-tracking-output)
-- [Authors](#-authors)
-- [License](#-license)
-
----
-
 ## 📖 Project Overview
 
 This capstone project presents a fully containerized, reproducible pipeline for processing *Ebola Virus (EBOV)* Illumina sequencing data — from raw reads to final variant calls. The pipeline is implemented in a bash script (`eboVar.sh`) and packaged inside an [Apptainer](https://apptainer.org) container to ensure portability and reproducibility across systems.

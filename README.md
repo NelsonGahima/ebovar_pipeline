@@ -55,7 +55,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 |--------|---------------------------------|----------|---------|
 | `-i`   | Input reads folder (raw FASTQ files) | Yes      | —       |
 | `-r`   | Reference genome FASTA file     | Yes      | —       |
-| `-o`   | Output folder for results       | Yes      | —       |
+| `-o`   | Output folder for results       | No       | results |
 | `-t`   | Number of threads               | No       | 8       |
 | `-h`   | Show help and usage info        | No       | —       |
 

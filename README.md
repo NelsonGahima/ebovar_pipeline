@@ -78,6 +78,7 @@ cd containers
 
 ```bash
 apptainer build ebovar.sif ebovar.def
+```
 
 ## ▶️ Running the Pipeline
 

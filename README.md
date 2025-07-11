@@ -1,9 +1,3 @@
----
-title: "EBOVar: Variant Calling Pipeline"
-description: "A reproducible Apptainer-based pipeline for processing Ebola Virus Illumina sequencing data"
-theme: jekyll-theme-cayman
----
-
 # 🧬 EBOVar: Variant Calling Pipeline for EBOV Sequences
 
 > **Capstone Project – Africa CDC Bioinformatics Fellowship**  

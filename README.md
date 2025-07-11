@@ -104,7 +104,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 ├── data/
 │   ├── rawreads/       # Input FASTQ files
 │   └── reference/      # EBOV reference genome and index files
-├── results/            # Output directory (see below)
+├── results/            # Output directory
 ├── scripts/
 │   └── eboVar.sh       # Main pipeline script
 └── docs/               # Optional documentation

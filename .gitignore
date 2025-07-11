@@ -5,7 +5,7 @@
 results/
 
 # Ignore FASTQ and large raw read files
-data/rawreads/*.fastq.gz
+# data/rawreads/*.fastq.gz
 
 # Ignore reference index files
 data/reference/*.amb

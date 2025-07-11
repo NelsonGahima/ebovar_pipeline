@@ -79,4 +79,14 @@ cd containers
 ```bash
 apptainer build ebovar.sif ebovar.def
 
+## ▶️ Running the Pipeline
+
+Run the pipeline using the built container and bind your project directory to `/data` inside the container:
+
+```bash
+apptainer run --bind $(pwd):/data containers/ebovar.sif \
+  -i /data/data/rawreads \
+  -r /data/data/reference/ebov_ref.fa \
+  -o /data/results \
+  -t 8
 

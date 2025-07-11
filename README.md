@@ -115,6 +115,40 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
     └── eboVar.sh
 ```
 
+## 🛠️ Tools Used (Versions specified in `ebovar.yml`)
+
+- **FastQC**
+- **fastp**
+- **BWA**
+- **samtools**
+- **bcftools**
+- **mamba / conda** (via Miniforge)
+
+## 📂 Expected Output
+
+For each sample, the pipeline generates:
+
+- **Quality Control:** FastQC reports (HTML + zip) in `results/qc/`
+- **Trimmed Reads:** Filtered FASTQ files and fastp HTML/JSON reports in `results/trimmed/`
+- **Alignments:** Sorted BAM files and BAM index files in `results/bam/`
+- **Variants:** Compressed VCF files (`.vcf.gz`) and indexes in `results/vcf/`
+- **Logs:** Detailed logs of pipeline steps in `results/logs/`
+
+## 📝 Gitignore and Tracking Output
+
+The `.gitignore` excludes all large raw input data and temporary files except for the `results/` directory, which is tracked to allow version control over pipeline outputs and reports.
+
+Keep your input data local or use `.gitignore` entries to avoid pushing large FASTQ files to the repository.
+
+## 👥 Authors
+
+Precious, Salif, Elvis, Nelson
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+
 
 
 

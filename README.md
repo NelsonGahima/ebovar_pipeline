@@ -68,7 +68,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 ```bash
 which apptainer
 ```
-Example output: /usr/local/bin/apptainer
+Example output: `/usr/local/bin/apptainer`
 
 2. Navigate to the `containers/` directory in your project:
 

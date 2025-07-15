@@ -93,7 +93,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
   -t 8
 ```
 
-## 📁 Project Structure
+## 📁 Directory Structure
 
 ```
 .

@@ -137,7 +137,7 @@ For each sample, the pipeline generates:
 
 ## 👥 Authors
 
-Precious, Salif, Elvis, Nelson
+Nelson, Precious, Salif, Elvis
 
 ## 📜 License
 

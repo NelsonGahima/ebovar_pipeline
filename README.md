@@ -8,8 +8,8 @@
 
 - [Project Overview](#-project-overview)
 - [Script: eboVar.sh](#-script-ebovarsh)
-- [Building the Apptainer Container](#%EF%B8%8F-building-the-apptainer-container)
-- [Running the Pipeline](#running-the-pipeline)
+- [Building the Apptainer Container](#-building-the-apptainer-container)
+- [Running the Pipeline](#-running-the-pipeline)
 - [Project Structure](#-project-structure)
 - [Tools Used](#-tools-used)
 - [Expected Output](#-expected-output)
@@ -59,7 +59,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
 | `-t`   | Number of threads               | No       | 8       |
 | `-h`   | Show help and usage info        | No       | —       |
 
-## ⚙️ Building the Apptainer Container
+## ⚙ Building the Apptainer Container
 
 1. Ensure you have [Apptainer](https://apptainer.org) installed on your system.  
    You can verify this by running:
@@ -81,7 +81,7 @@ cd containers
 apptainer build ebovar.sif ebovar.def
 ```
 
-## ▶️ Running the Pipeline
+## ▶ Running the Pipeline
 
 Run the pipeline using the built container and bind your project directory to `/data` inside the container:
 
@@ -116,7 +116,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
     └── eboVar.sh
 ```
 
-## 🛠️ Tools Used and Versions
+## 🛠 Tools Used and Versions
 
 - **FastQC**: `v.12.1`
 - **Fastp**: `v1.0.1`

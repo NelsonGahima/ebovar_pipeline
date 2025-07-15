@@ -135,12 +135,6 @@ For each sample, the pipeline generates:
 - **Variants:** Compressed VCF files (`.vcf.gz`) and indexes in `results/vcf/`
 - **Logs:** Detailed logs of pipeline steps in `results/logs/`
 
-## 📝 Gitignore and Tracking Output
-
-The `.gitignore` excludes all large raw input data and temporary files except for the `results/` directory, which is tracked to allow version control over pipeline outputs and reports.
-
-Keep your input data local or use `.gitignore` entries to avoid pushing large FASTQ files to the repository.
-
 ## 👥 Authors
 
 Precious, Salif, Elvis, Nelson

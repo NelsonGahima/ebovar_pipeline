@@ -10,7 +10,7 @@
 - [Script: eboVar.sh](#-script-ebovarsh)
 - [Building the Apptainer Container](#-building-the-apptainer-container)
 - [Running the Pipeline](#-running-the-pipeline)
-- [Directory Structure](#-directory-structure)
+- [Folder Structure](#-folder-structure)
 - [Tools Used](#-tools-used)
 - [Expected Output](#-expected-output)
 - [Gitignore and Tracking Output](#-gitignore-and-tracking-output)
@@ -93,7 +93,7 @@ apptainer run --bind $(pwd):/data containers/ebovar.sif \
   -t 8
 ```
 
-## 📁 Directory Structure
+## 📁 Folder Structure
 
 ```
 .

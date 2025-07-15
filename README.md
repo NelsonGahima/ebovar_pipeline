@@ -1,7 +1,6 @@
 # 🧬 EBOVar: Variant Calling Pipeline for EBOV Sequences
 
-> **Capstone Project – eboVar: A Bash Pipeline for EBOV Variant Profiling and analysis**  
-> **Group 1 | Module 15 | Date: July 10, 2025**
+> **Capstone Project – eboVar: A Bash Pipeline for EBOV Variant Profiling and analysis** 
 
 ---
 

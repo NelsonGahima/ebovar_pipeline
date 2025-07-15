@@ -1,6 +1,6 @@
 # 🧬 EBOVar: Variant Calling Pipeline for EBOV Sequences
 
-> **Capstone Project – eboVar: A Bash Pipeline for EBOV Variant Profiling and analysis** 
+> **eboVar: A Bash Pipeline for EBOV Variant Profiling and analysis** 
 
 ---
 
@@ -147,7 +147,7 @@ Precious, Salif, Elvis, Nelson
 
 ## 📜 License
 
-This project is licensed under the MIT License.
+This pipeline is licensed under the MIT License.
 
 
 

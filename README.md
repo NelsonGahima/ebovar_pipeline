@@ -11,7 +11,7 @@
 - [Building the Apptainer Container](#-building-the-apptainer-container)
 - [Running the Pipeline](#-running-the-pipeline)
 - [Folder Structure](#-folder-structure)
-- [Tools Used](#-tools-used)
+- [Tools Used and Versions](#-tools-used-and-versions)
 - [Expected Output](#-expected-output)
 - [Gitignore and Tracking Output](#-gitignore-and-tracking-output)
 - [Authors](#-authors)

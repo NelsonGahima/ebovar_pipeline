@@ -9,7 +9,7 @@
 - [Project Overview](#-project-overview)
 - [Script: eboVar.sh](#-script-ebovarsh)
 - [Building the Apptainer Container](#%EF%B8%8F-building-the-apptainer-container)
-- [Running the Pipeline](#-running-the-pipeline)
+- [Running the Pipeline](#running-the-pipeline)
 - [Project Structure](#-project-structure)
 - [Tools Used](#-tools-used)
 - [Expected Output](#-expected-output)
